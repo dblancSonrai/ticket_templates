@@ -1,0 +1,15 @@
+ource Content
+# title of ticket template is required
+title: "JIT: check box test"
+
+# The next fields are optional:
+description: "This templates is a test"
+version: "0.0.1"
+authorName: "Sonrai Security"
+authorEmail: "info@sonraisecurity.com"
+
+# one or more fields must be specified
+fields:
+  - name: "Close ticket after bot remediation"
+    required: true
+    type: "checkbox"
