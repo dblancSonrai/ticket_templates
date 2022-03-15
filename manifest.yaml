@@ -1,14 +1,29 @@
 # title of ticket template is required
-title: "JIT: check box test"
+title: "GAB Test Checkboxes"
 
 # The next fields are optional:
-description: "This templates is a test"
+description: "This template is a test"
 version: "0.0.1"
 authorName: "Sonrai Security"
 authorEmail: "info@sonraisecurity.com"
 
 # one or more fields must be specified
 fields:
-  - name: "Close ticket after bot remediation"
+  - name: "Collector"
+    required: true 
+    type: "select"
+    multi: false
+    select:
+      search: '{PlatformAccounts (where: {cloudType: {value:"aws"}}){count items { name srn }}}'
+      path: ["data", "PlatformAccounts", "items"]
+      valueField: "srn"
+      labelFields: ["name", "srn"]
+
+  - name: "Role Name"
     required: true
-    type: "checkbox"
+    type: "text"
+    multi: false
+
+  - name: "Bot Role Name"
+    required: true
+    type: "text"
