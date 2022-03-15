@@ -19,11 +19,6 @@ fields:
       valueField: "srn"
       labelFields: ["name", "srn"]
 
-  - name: "Role Name"
-    required: true
-    type: "text"
-    multi: false
-
   - name: "Bot Role Name"
     required: true
     type: "text"
