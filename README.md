@@ -1,1 +1,1 @@
-Tsting the creation up a check box thats checked
+Testing the creation up a check box thats checked
